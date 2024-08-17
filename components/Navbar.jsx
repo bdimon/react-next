@@ -52,11 +52,11 @@ function Navbar() {
               <Image
                 className="h-10 w-auto"
                 src={logo}
-                alt="Аренда Недвижимости"
+                alt="Main Page"
               />
 
               <span className="hidden md:block text-zinc-700 text-2xl font-bold ml-2">
-                Аренда Недвижимости
+                Main Page
               </span>
             </Link>
             {/* <!-- Desktop Menu Hidden below md screens --> */}
@@ -68,24 +68,24 @@ function Navbar() {
                     pathname === "/" ? "bg-amber-300" : ""
                   } text-zinc-700  hover:bg-amber-500 hover:text-zinc-700 rounded-md px-3 py-2`}
                 >
-                  Главная
+                  Home
                 </Link>
                 <Link
-                  href="/properties"
+                  href="/props"
                   className={`${
-                    pathname === "/properties" ? "bg-amber-300" : ""
+                    pathname === "/props" ? "bg-amber-300" : ""
                   } text-zinc-700  hover:bg-amber-500 hover:text-zinc-700 rounded-md px-3 py-2`}
                 >
-                  Недвижимость
+                  Properties
                 </Link>
                 {isLoggedIn && (
                   <Link
-                    href="/properties/add"
+                    href="/props/add"
                     className={`${
-                      pathname === "/properties/add" ? "bg-amber-300" : ""
+                      pathname === "/props/add" ? "bg-amber-300" : ""
                     } text-zinc-700  hover:bg-amber-500 hover:text-zinc-700 rounded-md px-3 py-2`}
                   >
-                    Добавить...
+                    Add...
                   </Link>
                 )}
               </div>
@@ -98,7 +98,7 @@ function Navbar() {
               <div className="flex items-center">
                 <button className="flex items-center  bg-amber-300 hover:bg-amber-500 hover:text-zinc-700 rounded-md px-3 py-2">
                   <FaGoogle className="text-zinc-700 mr-2" />
-                  <span>Вход</span>
+                  <span>Sign In</span>
                 </button>
               </div>
             </div>
@@ -172,16 +172,16 @@ function Navbar() {
                       tabIndex="-1"
                       id="user-menu-item-0"
                     >
-                      Ваш профиль
+                      Your Profile
                     </Link>
                     <Link
-                      href="/properties/saved"
+                      href="/props/saved"
                       className="block px-4 py-2 text-sm text-gray-700"
                       role="menuitem"
                       tabIndex="-1"
                       id="user-menu-item-2"
                     >
-                      Сохраненные недвижимости
+                      Saved results
                     </Link>
                     <button
                       className="block px-4 py-2 text-sm text-gray-700"
@@ -189,7 +189,7 @@ function Navbar() {
                       tabIndex="-1"
                       id="user-menu-item-2"
                     >
-                      Выйти
+                      Log Out
                     </button>
                   </div>
                 )}
@@ -209,30 +209,30 @@ function Navbar() {
                 pathname === "/" ? "bg-amber-300" : ""
               } text-black block rounded-md px-3 py-2 text-base font-medium`}
             >
-              Главная
+              Home
             </Link>
             <Link
-              href="/properties"
+              href="/props"
               className={`${
-                pathname === "/properties" ? "bg-amber-300" : ""
+                pathname === "/props" ? "bg-amber-300" : ""
               } text-black block rounded-md px-3 py-2 text-base font-medium`}
             >
-              Недвижимость
+              Properties
             </Link>
             {isLoggedIn && (
               <Link
-                href="/properties/add"
+                href="/props/add"
                 className={`${
-                  pathname === "/properties/add" ? "bg-amber-300" : ""
+                  pathname === "/props/add" ? "bg-amber-300" : ""
                 } text-black block rounded-md px-3 py-2 text-base font-medium`}
               >
-                Добавить...
+                Add...
               </Link>
             )}
             {!isLoggedIn && (
               <button className="flex items-center text-black bg-amber-300 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-4">
                 <FaGoogle className="text-white mr-2" />
-                <span>Вход</span>
+                <span>Sign In</span>
               </button>
             )}
           </div>
