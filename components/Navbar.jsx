@@ -96,7 +96,7 @@ function Navbar() {
           {!isLoggedIn && (
             <div className="hidden md:block md:ml-6">
               <div className="flex items-center">
-                <button className="flex items-center  bg-amber-300 hover:bg-amber-500 hover:text-zinc-700 rounded-md px-3 py-2">
+                <button className="flex items-center  bg-amber-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2">
                   <FaGoogle className="text-zinc-700 mr-2" />
                   <span>Sign In</span>
                 </button>
@@ -230,7 +230,7 @@ function Navbar() {
               </Link>
             )}
             {!isLoggedIn && (
-              <button className="flex items-center text-black bg-amber-300 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-4">
+              <button className="flex items-center text-black bg-amber-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 my-4">
                 <FaGoogle className="text-white mr-2" />
                 <span>Sign In</span>
               </button>
