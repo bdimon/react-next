@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Infobox(props) {
+function Infoboxes(props) {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function Infobox(props) {
     );
 }
 
-export default Infobox;
+export default Infoboxes;
