@@ -3,8 +3,8 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/assets/images/logo.png";
-import profile from "@/assets/images/profile.png";
+import logo from "@/public/images/logo.png";
+import profile from "@/public/images/profile.png";
 import { FaGoogle } from "react-icons/fa";
 
 
@@ -17,8 +17,9 @@ function Navbar() {
     <nav className="bg-emerald-400 border-b border-emerald-300">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-20 items-center justify-between">
+
+          {/* <!-- Mobile menu button--> */}
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
-            {/* <!-- Mobile menu button--> */}
             <button
               type="button"
               id="mobile-dropdown-button"
@@ -46,19 +47,19 @@ function Navbar() {
             </button>
           </div>
 
-          <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-            {/* <!-- Logo --> */}
+          {/* <!-- Desktop Main Menu --> */}
+          <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">            
             <Link className="flex flex-shrink-0 items-center" href="/">
               <Image
                 className="h-10 w-auto"
                 src={logo}
                 alt="Main Page"
               />
-
               <span className="hidden md:block text-zinc-700 text-2xl font-bold ml-2">
                 Main Page
               </span>
             </Link>
+
             {/* <!-- Desktop Menu Hidden below md screens --> */}
             <div className="hidden md:ml-6 md:block">
               <div className="flex space-x-2">
@@ -133,8 +134,8 @@ function Navbar() {
                   2
                 </span>
               </Link>
-              {/* <!-- Profile dropdown button --> */}
 
+              {/* <!-- Profile dropdown button --> */}
               <div className="relative ml-3">
                 <div>
                   <button
