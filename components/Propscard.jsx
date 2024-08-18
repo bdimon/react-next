@@ -76,8 +76,8 @@ function Propscard({property}) {
                   {property.location.city}, {property.location.state}
               </span>
           </div>
-          <Link href={`/properties/${property._id}`}  className="h-[36px] bg-amber-300 hover:bg-amber-500 hover:text-zinc-700 px-4 py-2 rounded-lg text-center text-sm">
-          Подробнее
+          <Link href={`/props/${property._id}`}  className="h-[36px] bg-amber-300 hover:bg-amber-500 hover:text-zinc-700 px-4 py-2 rounded-lg text-center text-sm">
+          More...
           </Link>
       </div>
     </div> 
